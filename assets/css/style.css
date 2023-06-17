@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  padding: 20px;
+}
+#header-left {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#header-right {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  border: 2px solid black;
+  padding: 2px;
+}
+
+main {
+  text-align: center;
+}
+
+h1 {
+  padding: 20px;
+}
+
+p {
+  padding: 20px 80px 20px 80px;
+}
+
+button {
+  margin: 20px;
+  border: 2px solid red;
+  padding: 2px;
+}
