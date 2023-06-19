@@ -16,7 +16,12 @@
   justify-content: center;
 }
 
-h3 {
+#header-left h3 {
+  border: 2px solid black;
+  padding: 2px;
+}
+
+#header-right h3 {
   border: 2px solid black;
   padding: 2px;
 }
@@ -55,4 +60,18 @@ button {
 #questionOneAnswers {
   display: none;
   justify-content: center;
+}
+
+#incorrect {
+  display: none;
+  justify-content: center;
+  padding: 20px;
+  font-size: 50px;
+}
+
+#correct {
+  display: none;
+  justify-content: center;
+  padding: 20px;
+  font-size: 50px;
 }
