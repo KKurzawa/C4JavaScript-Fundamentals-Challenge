@@ -26,14 +26,15 @@
   padding: 2px;
 }
 
-main {
+/* main {
   text-align: center;
-}
+} */
 
 #homePage h1 {
   padding: 20px;
   background-color: yellow;
   font-size: 50px;
+  text-align: center;
 }
 
 #homePage p {
@@ -47,20 +48,20 @@ button {
   padding: 4px;
   background-color: rgb(220, 209, 209);
   font-size: 25px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
-#questionOne,
-#questionTwo {
-  display: none;
+#question {
   padding: 20px;
   background-color: yellow;
   font-size: 50px;
-  justify-content: center;
+  text-align: center;
 }
 
-#questionOneAnswers,
-#questionTwoAnswers {
-  display: none;
+#questionAnswers {
+  display: flex;
   justify-content: center;
 }
 
@@ -76,4 +77,12 @@ button {
   justify-content: center;
   padding: 20px;
   font-size: 50px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }

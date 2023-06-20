@@ -5,7 +5,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="./Assets/css/reset.css">
-        <link rel="stylesheet" href="./Assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
         <title>JavaScript Fundamentals Challenge</title>
     </head>
 
@@ -18,29 +18,19 @@
                 <h3 id="timer"></h3>
             </div>  
         </header>
-        <main id="main">
-            <div id="homePage">
+            <div id="homePage" class="start-container">
                 <h1>JavaScript Fundamentals Challenge</h1>
                 <p>Challenge yourself to answer the following questions within the time limit.  Each correct answer will award 10 points while each incorrect answer will deduct 10 seconds from the time limit.  Good luck!</p>
                 <button id="begin" class="btn">Let The Challenge Begin!</button>
             </div>
-            <div id="questionOne">
-                <h1>What does a boolean represent?</h1>
-            </div>  
-            <div id="questionOneAnswers">
-                    <button id="yesOrNo" class="btn">Yes or no</button>
-                    <button id="aNumber" class="btn">A number</button>
-                    <button id="trueOrFalse" class="btn">True or false</button>
-                    <button id="text" class="btn">Text</button>
-            </div>
-            <div id="questionTwo">
-                <h1>A function does which of the following?</h1>
-            </div>  
-            <div id="questionTwoAnswers">
-                    <button id="searchesAndReturns" class="btn">Searches and returns an element</button>
-                    <button id="taskOrValue" class="btn">Performs a task or calculates a value</button>
-                    <button id="createsVariable" class="btn">Creates a variable</button>
-                    <button id="activatesButton" class="btn">Activates a button</button>
+            <div class="questionContainer hide">
+                <h1 id="question">question</h1>
+                <div id="questionAnswers">
+                        <button id="ans1" class="btn">answer 1</button>
+                        <button id="ans2" class="btn">answer 2</button>
+                        <button id="ans3" class="btn">answer 3</button>
+                        <button id="ans4" class="btn">answer 4</button>
+                </div>
             </div>
             <div id="incorrect">
                 <h2>Incorrect</h2>
@@ -48,8 +38,13 @@
             <div id="correct">
                 <h2>Correct</h2>
             </div>
-        </main>
+            <div class="userInitials hide">
+                <input type="text" placeholder="type your initials here">
+                <button type="button">Submit</button>
+            </div>
+        
 
-        <script src="./assets/javascript/script.js"></script>
+        <script src="./assets/javascript/questions.js"></script>
+        <script src="./assets/javascript/logic.js"></script>
     </body>
 </html>
