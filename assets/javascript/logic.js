@@ -2,7 +2,7 @@
 var button = document.querySelector('#begin');
 var homePage= document.querySelector("#homePage")
 
-//question one variables
+//question/answer variables
 var btn1 = document.querySelector("#ans1");
 var btn2 = document.querySelector("#ans2");
 var btn3 = document.querySelector("#ans3");
@@ -14,7 +14,7 @@ var userContainer= document.querySelector(".userInitials")
 
 //timer variables
 var timeEl = document.querySelector("#timer");
-var secondsLeft = 60;
+var secondsLeft = 75;
 timeEl.textContent = "Time: " + secondsLeft;
 var timerInterval ;
 
@@ -22,6 +22,7 @@ var timerInterval ;
 var index=0;
 var score=0;
 
+//game start 
 function startQuiz(){
 homePage.classList.add("hide") 
 questionCont.classList.replace("hide", "show")

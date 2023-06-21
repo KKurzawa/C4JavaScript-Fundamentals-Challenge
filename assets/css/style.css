@@ -26,10 +26,6 @@
   padding: 2px;
 }
 
-/* main {
-  text-align: center;
-} */
-
 #homePage h1 {
   padding: 20px;
   background-color: yellow;
@@ -40,6 +36,17 @@
 #homePage p {
   padding: 20px 100px 20px 100px;
   font-size: 30px;
+}
+
+#homePage #begin {
+  margin: 20px;
+  border: 2px solid black;
+  padding: 4px;
+  background-color: rgb(220, 209, 209);
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 button {

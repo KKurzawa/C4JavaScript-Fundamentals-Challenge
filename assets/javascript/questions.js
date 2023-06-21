@@ -1,5 +1,6 @@
 const questions=[
     {
+        //question/answers one
         question:"What does a boolean represent?",
         option1:"Yes or no",
         option2:"A number",
@@ -8,6 +9,7 @@ const questions=[
         correct:"True or false",
     },
     {
+        //question/answers two
         question:"The first element of an array is represented by which of the following?",
         option1:"A",
         option2:"1",
@@ -16,6 +18,7 @@ const questions=[
         correct:"0", 
     },
     {
+        //question/answers three
         question:"Query selectors target which of the following?",
         option1:"Elements",
         option2:"Functions",
@@ -24,7 +27,8 @@ const questions=[
         correct:"Elements", 
     },
     {
-        question:"A for loop repeats until a specified condition evaluates to which of the following?",
+        //question/answers four
+        question:"A 'for' loop repeats until a specified condition evaluates to which of the following?",
         option1:"False",
         option2:"True",
         option3:"0",
@@ -32,6 +36,7 @@ const questions=[
         correct:"False", 
     },
     {
+        //question/answers five
         question:"When the condition in an 'if' statement is falsy the condition in the '___' statement is executed.",
         option1:"else",
         option2:"either",
