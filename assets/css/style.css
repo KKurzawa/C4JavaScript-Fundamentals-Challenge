@@ -38,8 +38,8 @@
   font-size: 30px;
 }
 
-#homePage #begin {
-  margin: 20px;
+#homePage #begin { 
+  margin: auto;
   border: 2px solid black;
   padding: 4px;
   background-color: rgb(220, 209, 209);
@@ -92,4 +92,28 @@ button {
 
 .show {
   display: block;
+}
+
+.userInitials {
+  margin: 10%;
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  font-weight: bolder;
+}
+
+#submitButton {
+  margin: auto;
+  border: 2px solid black;
+  padding: 4px;
+  background-color: rgb(220, 209, 209);
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
