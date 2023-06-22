@@ -98,11 +98,11 @@ btnGrid.addEventListener("click", (event)=>{
 });
 
 submitButton.addEventListener("click", function() {
+    var initials = document.getElementById("initials").value;
+    localStorage.setItem("initials", initials)
     localStorage.setItem("score", score)
     userContainer.classList.replace("show", "hide")
     document.getElementById("highScoresDisplay").style.display = "flex";
-    var initials = document.getElementById("initials").value;
-    console.log(initials);
   });
 
 
