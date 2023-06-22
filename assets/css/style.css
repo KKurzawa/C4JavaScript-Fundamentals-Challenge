@@ -129,3 +129,7 @@ input {
   justify-content: center;
   text-align: center;
 }
+
+#highScoresDisplay {
+  display: none;
+}
