@@ -107,8 +107,15 @@ button {
 }
 
 .userInitials {
-  margin: 10%;
+  margin: 4%;
   text-align: center;
+}
+
+#userScore {
+  font-size: 30px;
+  display: none;
+  justify-content: center;
+  padding-top: 40px;
 }
 
 input {

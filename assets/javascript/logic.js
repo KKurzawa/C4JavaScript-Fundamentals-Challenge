@@ -12,6 +12,7 @@ var questionCont= document.querySelector(".questionContainer");
 var questionEL= document.querySelector("#question")
 var btnGrid= document.querySelector("#questionAnswers")
 var userContainer= document.querySelector(".userInitials")
+// var userScore = document.getElementById("#userScore")
 
 //timer variables
 var timeEl = document.querySelector("#timer");
@@ -22,7 +23,7 @@ var timerInterval ;
 //game variables
 var index=0;
 var score=0;
-
+var userScore = document.querySelector("#userScore");
 
 //game start 
 function startQuiz(){
@@ -76,15 +77,22 @@ function checkAnswer(answer){
     }
 }
 
+
 function endQuiz(){
     questionCont.style.display="none"
     userContainer.classList.replace("hide", "show")
     document.getElementById('incorrect').style.display = 'none'
     document.getElementById('correct').style.display = 'none'
     clearInterval(timerInterval);
-}
+    localStorage.setItem("score", score)
+    displayUserScore();
+};
 
-
+function displayUserScore (){
+    var scoreFromStorage = localStorage.getItem("score");
+    userScore.style.display = "flex"; 
+    userScore.innerHTML = "Score:" + scoreFromStorage;
+};
 
 button.addEventListener("click", ()=>{
     startQuiz()
@@ -100,11 +108,11 @@ btnGrid.addEventListener("click", (event)=>{
 submitButton.addEventListener("click", function() {
     var initials = document.getElementById("initials").value;
     localStorage.setItem("initials", initials)
-    localStorage.setItem("score", score)
     updateHighScoreDisplay();
 });
 
-function updateHighScoreDisplay() {  
+function updateHighScoreDisplay() { 
+userScore.style.display = 'none'; 
 var initialsFromStorage = localStorage.getItem("initials")
 var scoreFromStorage = localStorage.getItem("score")
 userContainer.classList.replace("show", "hide")
