@@ -101,11 +101,17 @@ submitButton.addEventListener("click", function() {
     var initials = document.getElementById("initials").value;
     localStorage.setItem("initials", initials)
     localStorage.setItem("score", score)
-    userContainer.classList.replace("show", "hide")
-    document.getElementById("highScoresDisplay").style.display = "flex";
-  });
+    updateHighScoreDisplay();
+});
 
-
+function updateHighScoreDisplay() {  
+var initialsFromStorage = localStorage.getItem("initials")
+var scoreFromStorage = localStorage.getItem("score")
+userContainer.classList.replace("show", "hide")
+var highScoresDisplay = document.getElementById("highScoresDisplay");
+highScoresDisplay.style.display = "flex";
+highScoresDisplay.innerHTML = initialsFromStorage + " - " + scoreFromStorage;
+}
 
   // submitButton.addEventListener("click", function() {
 //   localStorage.getItem(score)
