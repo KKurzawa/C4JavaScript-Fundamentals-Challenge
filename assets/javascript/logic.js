@@ -24,6 +24,8 @@ var timerInterval ;
 var index=0;
 var score=0;
 var userScore = document.querySelector("#userScore");
+var restartQuiz = document.querySelector("#restartQuiz");
+var clearHighScores = document.querySelector("#clearHighScores");
 
 //game start 
 function startQuiz(){
@@ -101,12 +103,12 @@ viewHighScores.addEventListener("click", function() {
     endQuiz();
     updateHighScoreDisplay();
     displayHighScoreHeader();
+    displayRestartButtons(); 
 })
 
 button.addEventListener("click", ()=>{
     startQuiz()
     setTime()
-    
 });
 
 btnGrid.addEventListener("click", (event)=>{
@@ -118,7 +120,8 @@ submitButton.addEventListener("click", function() {
     var initials = document.getElementById("initials").value;
     localStorage.setItem("initials", initials)
     updateHighScoreDisplay();
-    displayHighScoreHeader();
+    displayHighScoreHeader();  
+    displayRestartButtons(); 
 });
 
 function updateHighScoreDisplay() { 
@@ -135,9 +138,14 @@ function displayHighScoreHeader() {
     var highScoresHeader = document.getElementById("highScoresHeader");
     highScoresHeader.style.display = "flex";
 }
+
+function displayRestartButtons () {
+    restartQuiz.style.display = 'flex';
+    clearHighScores.style.display = 'flex';
+}
 // To Do on High Scores page:
-// 1. Create Button to start quiz that takes user to homepage but does not clear local storage
-// 2. Create Button to reset high scores that takes user to homepage and clears local storage
+// 1. Set Button to start quiz that takes user to homepage but does not clear local storage
+// 2. Set Button to reset high scores that takes user to homepage and clears local storage
 
 // possible assets for local storage
 

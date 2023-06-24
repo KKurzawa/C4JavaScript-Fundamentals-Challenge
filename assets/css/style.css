@@ -153,3 +153,38 @@ input {
   padding: 20px;
   font-size: 40px;
 }
+
+#restartQuizBtn {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+#restartQuiz {
+  margin: auto;
+  border: 2px solid black;
+  padding: 4px;
+  background-color: rgb(220, 209, 209);
+  font-size: 25px;
+  display: none;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+#clearHighScoresBtn {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#clearHighScores {
+  margin: auto;
+  border: 2px solid black;
+  padding: 4px;
+  background-color: rgb(220, 209, 209);
+  font-size: 25px;
+  display: none;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
