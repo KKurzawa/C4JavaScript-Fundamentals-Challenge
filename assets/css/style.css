@@ -112,10 +112,12 @@ button {
 }
 
 #userScore {
-  font-size: 30px;
   display: none;
+  padding: 20px;
+  background-color: yellow;
+  font-size: 50px;
+  font-weight: bold;
   justify-content: center;
-  padding-top: 40px;
 }
 
 input {
@@ -137,6 +139,17 @@ input {
   text-align: center;
 }
 
+#highScoresHeader {
+  display: none;
+  padding: 20px;
+  background-color: yellow;
+  font-size: 50px;
+  font-weight: bold;
+  justify-content: center;
+}
 #highScoresDisplay {
   display: none;
+  justify-content: center;
+  padding: 20px;
+  font-size: 40px;
 }

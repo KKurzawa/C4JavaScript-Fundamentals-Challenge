@@ -9,10 +9,10 @@ var btn2 = document.querySelector("#ans2");
 var btn3 = document.querySelector("#ans3");
 var btn4 = document.querySelector("#ans4");
 var questionCont= document.querySelector(".questionContainer");
-var questionEL= document.querySelector("#question")
-var btnGrid= document.querySelector("#questionAnswers")
-var userContainer= document.querySelector(".userInitials")
-// var userScore = document.getElementById("#userScore")
+var questionEL= document.querySelector("#question");
+var btnGrid= document.querySelector("#questionAnswers");
+var userContainer= document.querySelector(".userInitials");
+var viewHighScores = document.querySelector("#highScores");
 
 //timer variables
 var timeEl = document.querySelector("#timer");
@@ -91,14 +91,23 @@ function endQuiz(){
 function displayUserScore (){
     var scoreFromStorage = localStorage.getItem("score");
     userScore.style.display = "flex"; 
-    userScore.innerHTML = "Score:" + scoreFromStorage;
+    userScore.innerHTML = "Your Score:" + scoreFromStorage;
 };
+
+viewHighScores.addEventListener("click", function() {
+    homePage.classList.add("hide") 
+    var initials = document.getElementById("initials").value;
+    localStorage.setItem("initials", initials)
+    endQuiz();
+    updateHighScoreDisplay();
+    displayHighScoreHeader();
+})
 
 button.addEventListener("click", ()=>{
     startQuiz()
-    setTime();
+    setTime()
+    
 });
-
 
 btnGrid.addEventListener("click", (event)=>{
     var btnClick= event.target.textContent
@@ -109,6 +118,7 @@ submitButton.addEventListener("click", function() {
     var initials = document.getElementById("initials").value;
     localStorage.setItem("initials", initials)
     updateHighScoreDisplay();
+    displayHighScoreHeader();
 });
 
 function updateHighScoreDisplay() { 
@@ -121,11 +131,13 @@ highScoresDisplay.style.display = "flex";
 highScoresDisplay.innerHTML = initialsFromStorage + " - " + scoreFromStorage;
 }
 
-  // submitButton.addEventListener("click", function() {
-//   localStorage.getItem(score)
-//   highScoresDisplay = score;
-// });
-
+function displayHighScoreHeader() {
+    var highScoresHeader = document.getElementById("highScoresHeader");
+    highScoresHeader.style.display = "flex";
+}
+// To Do on High Scores page:
+// 1. Create Button to start quiz that takes user to homepage but does not clear local storage
+// 2. Create Button to reset high scores that takes user to homepage and clears local storage
 
 // possible assets for local storage
 
