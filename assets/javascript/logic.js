@@ -144,8 +144,8 @@ function displayRestartButtons () {
     clearHighScores.style.display = 'flex';
 }
 // To Do on High Scores page:
-// 1. Set Button to start quiz that takes user to homepage but does not clear local storage
-// 2. Set Button to reset high scores that takes user to homepage and clears local storage
+// 1. Set Button to reset high scores that takes user to homepage and clears local storage
+// 2. Get rid of question error
 
 // possible assets for local storage
 
