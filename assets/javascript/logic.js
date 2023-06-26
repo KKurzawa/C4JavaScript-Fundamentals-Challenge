@@ -26,11 +26,14 @@ var score=0;
 var userScore = document.querySelector("#userScore");
 var restartQuiz = document.querySelector("#restartQuiz");
 var clearHighScores = document.querySelector("#clearHighScores");
+var highScoresDisplay = document.getElementById("highScoresDisplay");
+
 
 //game start 
 function startQuiz(){
 homePage.classList.add("hide") 
 questionCont.classList.replace("hide", "show")
+// console.log(questions);
 
 if(index >= questions.length){
     endQuiz()
@@ -124,12 +127,21 @@ submitButton.addEventListener("click", function() {
     displayRestartButtons(); 
 });
 
+clearHighScores.addEventListener("click", function(){
+    localStorage.clear();
+    highScoresDisplay.style.display = "none"; 
+});
+
+function refreshPage(){
+    document.location.reload();
+};
+
 function updateHighScoreDisplay() { 
 userScore.style.display = 'none'; 
 var initialsFromStorage = localStorage.getItem("initials")
 var scoreFromStorage = localStorage.getItem("score")
 userContainer.classList.replace("show", "hide")
-var highScoresDisplay = document.getElementById("highScoresDisplay");
+
 highScoresDisplay.style.display = "flex";
 highScoresDisplay.innerHTML = initialsFromStorage + " - " + scoreFromStorage;
 }
