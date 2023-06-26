@@ -28,7 +28,6 @@ var restartQuiz = document.querySelector("#restartQuiz");
 var clearHighScores = document.querySelector("#clearHighScores");
 var highScoresDisplay = document.getElementById("highScoresDisplay");
 
-
 //game start 
 function startQuiz(){
 homePage.classList.add("hide") 
@@ -89,15 +88,13 @@ function endQuiz(){
     document.getElementById('incorrect').style.display = 'none'
     document.getElementById('correct').style.display = 'none'
     clearInterval(timerInterval);
-    localStorage.setItem("score", score)
     displayUserScore();
 };
 
 // displays user score
 function displayUserScore (){
-    var scoreFromStorage = localStorage.getItem("score");
     userScore.style.display = "flex"; 
-    userScore.innerHTML = "Your Score:" + scoreFromStorage;
+    userScore.innerHTML = "Your Score:" + score;
 };
 
 // Refresh's page
@@ -108,12 +105,10 @@ function refreshPage(){
 // shows high score
 function updateHighScoreDisplay() { 
 userScore.style.display = 'none'; 
-var initialsFromStorage = localStorage.getItem("initials")
-var scoreFromStorage = localStorage.getItem("score")
+var scoreFromStorage = localStorage.getItem("scores")
 userContainer.classList.replace("show", "hide")
-
 highScoresDisplay.style.display = "flex";
-highScoresDisplay.innerHTML = initialsFromStorage + " - " + scoreFromStorage;
+highScoresDisplay.innerHTML = scoreFromStorage;
 }
 
 // displays high score header
@@ -150,7 +145,26 @@ btnGrid.addEventListener("click", (event)=>{
 
 submitButton.addEventListener("click", function() {
     var initials = document.getElementById("initials").value;
-    localStorage.setItem("initials", initials)
+    
+    if (!localStorage.getItem("scores")) {
+        localStorage.setItem("scores", JSON.stringify({}))
+    }
+    
+    var localStorageObject = JSON.parse(localStorage.getItem("scores"));
+    localStorageObject[initials] = 0;
+    
+    // if (localStorageObject[initials]) {
+    //     // do nothing
+    // } else {
+    //     localStorageObject[initials] = 0;
+    // }
+
+    if (score>localStorageObject[initials]) {
+        localStorageObject[initials]=score;
+    };
+
+    score = 0;
+    localStorage.setItem("scores", JSON.stringify(localStorageObject));
     updateHighScoreDisplay();
     displayHighScoreHeader();  
     displayRestartButtons(); 
