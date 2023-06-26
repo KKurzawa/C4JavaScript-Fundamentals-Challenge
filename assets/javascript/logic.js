@@ -82,7 +82,7 @@ function checkAnswer(answer){
     }
 }
 
-
+// ends quiz
 function endQuiz(){
     questionCont.style.display="none"
     userContainer.classList.replace("hide", "show")
@@ -93,11 +93,40 @@ function endQuiz(){
     displayUserScore();
 };
 
+// displays user score
 function displayUserScore (){
     var scoreFromStorage = localStorage.getItem("score");
     userScore.style.display = "flex"; 
     userScore.innerHTML = "Your Score:" + scoreFromStorage;
 };
+
+// Refresh's page
+function refreshPage(){
+    document.location.reload();
+};
+
+// shows high score
+function updateHighScoreDisplay() { 
+userScore.style.display = 'none'; 
+var initialsFromStorage = localStorage.getItem("initials")
+var scoreFromStorage = localStorage.getItem("score")
+userContainer.classList.replace("show", "hide")
+
+highScoresDisplay.style.display = "flex";
+highScoresDisplay.innerHTML = initialsFromStorage + " - " + scoreFromStorage;
+}
+
+// displays high score header
+function displayHighScoreHeader() {
+    var highScoresHeader = document.getElementById("highScoresHeader");
+    highScoresHeader.style.display = "flex";
+}
+
+// makes restart quiz and clear highscores buttons visible
+function displayRestartButtons () {
+    restartQuiz.style.display = 'flex';
+    clearHighScores.style.display = 'flex';
+}
 
 viewHighScores.addEventListener("click", function() {
     homePage.classList.add("hide") 
@@ -132,29 +161,6 @@ clearHighScores.addEventListener("click", function(){
     highScoresDisplay.style.display = "none"; 
 });
 
-function refreshPage(){
-    document.location.reload();
-};
-
-function updateHighScoreDisplay() { 
-userScore.style.display = 'none'; 
-var initialsFromStorage = localStorage.getItem("initials")
-var scoreFromStorage = localStorage.getItem("score")
-userContainer.classList.replace("show", "hide")
-
-highScoresDisplay.style.display = "flex";
-highScoresDisplay.innerHTML = initialsFromStorage + " - " + scoreFromStorage;
-}
-
-function displayHighScoreHeader() {
-    var highScoresHeader = document.getElementById("highScoresHeader");
-    highScoresHeader.style.display = "flex";
-}
-
-function displayRestartButtons () {
-    restartQuiz.style.display = 'flex';
-    clearHighScores.style.display = 'flex';
-}
 // To Do on High Scores page:
 // 1. Set Button to reset high scores that takes user to homepage and clears local storage
 // 2. Get rid of question error

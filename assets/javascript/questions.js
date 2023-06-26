@@ -38,10 +38,10 @@ const questions=[
     {
         //question/answers five
         question:"When the condition in an 'if' statement is falsy the condition in the '___' statement is executed.",
-        option1:"else",
+        option1:"instead",
         option2:"either",
         option3:"rather",
-        option4:"instead",
+        option4:"else",
         correct:"else", 
     },
 ]
