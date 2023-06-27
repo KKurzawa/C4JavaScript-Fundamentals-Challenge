@@ -31,10 +31,9 @@ var highScoresDisplay = document.getElementById("highScoresDisplay");
 //game start 
 function startQuiz(){
 homePage.classList.add("hide") 
-questionCont.classList.replace("hide", "show")
-git
+questionCont.classList.replace("hide", "show");
 
-if(index >= (questions.length-1)){
+if(index >= (questions.length)){
     endQuiz()
 }
 questionEL.textContent=questions[index].question;
@@ -60,7 +59,7 @@ function setTime() {
 // checks if answer is correct or incorrect and adds to score or deducts time
 function checkAnswer(answer){
     if(answer === questions[index].correct){
-        // index++
+        index+1
         score+=10
         document.getElementById('correct').style.display = 'flex'
         console.log(score);
@@ -70,7 +69,7 @@ function checkAnswer(answer){
         }, 1500);
     }
     else{
-        // index++;
+        index+1
         secondsLeft-=10;
         document.getElementById('incorrect').style.display = 'flex'
         console.log(score);
