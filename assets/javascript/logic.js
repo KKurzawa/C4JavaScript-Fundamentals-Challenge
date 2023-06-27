@@ -34,9 +34,9 @@ homePage.classList.add("hide")
 questionCont.classList.replace("hide", "show")
 // console.log(questions);
 
-// if(index >= (questions.length-1)){
-//     endQuiz()
-// }
+if(index >= (questions.length-1)){
+    endQuiz()
+}
 questionEL.textContent=questions[index].question;
 btn1.textContent=questions[index].option1;
 btn2.textContent=questions[index].option2;
