@@ -34,9 +34,9 @@ homePage.classList.add("hide")
 questionCont.classList.replace("hide", "show")
 // console.log(questions);
 
-if(index >= questions.length){
-    endQuiz()
-}
+// if(index >= (questions.length-1)){
+//     endQuiz()
+// }
 questionEL.textContent=questions[index].question;
 btn1.textContent=questions[index].option1;
 btn2.textContent=questions[index].option2;
@@ -60,7 +60,7 @@ function setTime() {
 // checks if answer is correct or incorrect and adds to score or deducts time
 function checkAnswer(answer){
     if(answer === questions[index].correct){
-        index++
+        // index++
         score+=10
         document.getElementById('correct').style.display = 'flex'
         console.log(score);
@@ -70,7 +70,7 @@ function checkAnswer(answer){
         }, 1500);
     }
     else{
-        index++;
+        // index++;
         secondsLeft-=10;
         document.getElementById('incorrect').style.display = 'flex'
         console.log(score);
@@ -79,6 +79,11 @@ function checkAnswer(answer){
             document.getElementById('incorrect').style.display = 'none'
         }, 1500);
     }
+    if(index >= (questions.length-1)){
+    endQuiz()
+} else {
+    index++
+}
 }
 
 // ends quiz
@@ -105,10 +110,16 @@ function refreshPage(){
 // shows high score
 function updateHighScoreDisplay() { 
 userScore.style.display = 'none'; 
-var scoreFromStorage = localStorage.getItem("scores")
+var scoreFromStorage = JSON.parse(localStorage.getItem("scores"))
+var highScoreItems = "";
+for (score in scoreFromStorage) {
+    console.log(score);
+    console.log(scoreFromStorage[score]);
+    highScoreItems = highScoreItems + "<li>" + score + ": " + scoreFromStorage[score]+ "</li>"
+}
 userContainer.classList.replace("show", "hide")
 highScoresDisplay.style.display = "flex";
-highScoresDisplay.innerHTML = scoreFromStorage;
+document.getElementById("highScoreList").innerHTML=highScoreItems;
 }
 
 // displays high score header
