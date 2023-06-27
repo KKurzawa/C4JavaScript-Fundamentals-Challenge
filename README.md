@@ -16,7 +16,7 @@ Screenshots:
 ![Question4](https://github.com/KKurzawa/C4JavaScript-Fundamentals-Challenge/blob/main/assets/images/img5.png)
 ![Question5](https://github.com/KKurzawa/C4JavaScript-Fundamentals-Challenge/blob/main/assets/images/img6.png)
 ![EndQuiz](https://github.com/KKurzawa/C4JavaScript-Fundamentals-Challenge/blob/main/assets/images/img7.png)
-![Highscores](https://github.com/KKurzawa/C4JavaScript-Fundamentals-Challenge/blob/main/assets/images/img7.png)
+![Highscores](https://github.com/KKurzawa/C4JavaScript-Fundamentals-Challenge/blob/main/assets/images/img8.png)
 
 Website URL:
 
