@@ -73,13 +73,6 @@ button {
   cursor: pointer;
 }
 
-/* #question {
-  padding: 20px;
-  background-color: yellow;
-  font-size: 50px;
-  text-align: center;
-} */
-
 #questionAnswers {
   display: flex;
   justify-content: center;
@@ -92,13 +85,6 @@ button {
   padding: 20px;
   font-size: 50px;
 }
-
-/* #correct {
-  display: none;
-  justify-content: center;
-  padding: 20px;
-  font-size: 50px;
-} */
 
 .hide {
   display: none;
@@ -142,15 +128,6 @@ input {
   text-align: center;
 }
 
-/* #highScoresHeader {
-  display: none;
-  padding: 20px;
-  background-color: yellow;
-  font-size: 50px;
-  font-weight: bold;
-  justify-content: center;
-} */
-
 #highScoresDisplay {
   display: none;
   justify-content: center;
@@ -176,24 +153,6 @@ input {
   text-align: center;
   cursor: pointer;
 }
-
-/* #clearHighScoresBtn {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-} */
-
-/* #clearHighScores {
-  margin: auto;
-  border: 2px solid black;
-  padding: 4px;
-  background-color: rgb(220, 209, 209);
-  font-size: 25px;
-  display: none;
-  justify-content: center;
-  text-align: center;
-  cursor: pointer;
-} */
 
 @media screen and (max-width: 768px) {
   #questionAnswers {
