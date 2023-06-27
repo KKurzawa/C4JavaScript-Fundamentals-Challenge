@@ -32,7 +32,7 @@ var highScoresDisplay = document.getElementById("highScoresDisplay");
 function startQuiz(){
 homePage.classList.add("hide") 
 questionCont.classList.replace("hide", "show")
-
+git
 
 if(index >= (questions.length-1)){
     endQuiz()
