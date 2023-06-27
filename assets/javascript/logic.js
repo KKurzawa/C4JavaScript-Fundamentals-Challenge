@@ -32,7 +32,7 @@ var highScoresDisplay = document.getElementById("highScoresDisplay");
 function startQuiz(){
 homePage.classList.add("hide") 
 questionCont.classList.replace("hide", "show")
-// console.log(questions);
+
 
 if(index >= (questions.length-1)){
     endQuiz()
@@ -164,11 +164,11 @@ submitButton.addEventListener("click", function() {
     var localStorageObject = JSON.parse(localStorage.getItem("scores"));
     localStorageObject[initials] = 0;
     
-    // if (localStorageObject[initials]) {
-    //     // do nothing
-    // } else {
-    //     localStorageObject[initials] = 0;
-    // }
+    if (localStorageObject[initials]) {
+        // do nothing
+    } else {
+        localStorageObject[initials] = 0;
+    }
 
     if (score>localStorageObject[initials]) {
         localStorageObject[initials]=score;
@@ -186,15 +186,3 @@ clearHighScores.addEventListener("click", function(){
     highScoresDisplay.style.display = "none"; 
 });
 
-// To Do on High Scores page:
-// 1. Set Button to reset high scores that takes user to homepage and clears local storage
-// 2. Get rid of question error
-
-// possible assets for local storage
-
-// if (email === "") {
-//     displayMessage("error", "Email cannot be blank");
-//   } else if (password === "") {
-//     displayMessage("error", "Password cannot be blank");
-//   } else {
-//     displayMessage("success", "Registered successfully");
