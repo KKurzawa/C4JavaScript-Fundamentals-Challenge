@@ -65,6 +65,7 @@ button {
   display: flex;
   justify-content: center;
   text-align: center;
+  color: black;
 }
 
 #header-left h3,
