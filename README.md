@@ -1,6 +1,6 @@
-# C4 JavaScript Quiz
+# JavaScript Quiz
 
-## Challenge 4 in MSU Bootcamp
+## Description
 
 This project creates a quiz about JavaScript fundementals for students who are learning the language. As a bootcamp student I've found these type of quizes to be helpful to retain basic fundementals of the current topic. I think it's also important to have a sense of your understanding of such topics compared to your peers which the high scores page supplies. With the seperate questions.js file it makes it very easy for a developer to change the questions/answers as he or she chooses. A developer can easily change the time allowed as well as the results of choosing a correct or incorrect answer. Through building this project it helped tighten up my HTML/CSS skills and learn to implement newer JavaScript concepts to me such as Event Listeners and Local Storage.
 
