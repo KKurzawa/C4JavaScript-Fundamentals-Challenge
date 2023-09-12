@@ -20,7 +20,7 @@ Screenshots:
 
 Website URL: https://kkurzawa.github.io/C4JavaScript-Fundamentals-Challenge/
 
-GitHub Repository: https://github.com/KKurzawa/C4JavaScript-Fundamentals-Challenge
+GitHub Repository: https://github.com/KKurzawa/JavaScript-Fundamentals-Challenge
 
 ## CREDITS
 
